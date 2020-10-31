@@ -39,6 +39,7 @@ def initial_setup():
     set_config_value(utIniFileServer, 'Engine.GameInfo', 'GamePassword', '')
     ## Add some bots by default
     set_config_value(utIniFileServer, 'Botpack.DeathMatchPlus', 'MinPlayers', '10')
+    set_config_value(utIniFileServer, 'Botpack.CTFGame', 'MinPlayers', '10')
     ## Section to enable/disable publishing the server in the server list
     set_config_value(utIniFileServer, 'IpServer.UdpServerUplink', 'DoUpLink', 'False')
     set_config_value(utIniFileServer, 'IpServer.UdpServerUplink', 'UpdateMinutes', '1')
@@ -110,6 +111,8 @@ def prepare():
     ## Replace / Add Admin and Game password
     set_config_to_environment('UT_ADMINPWD', utIniFileServer, 'Engine.GameInfo', 'AdminPassword')
     set_config_to_environment('UT_GAMEPWD', utIniFileServer, 'Engine.GameInfo', 'GamePassword')
+    
+    set_config_value(utIniFileServer, 'Botpack.CTFGame', 'MinPlayers', '10')
 
 def move_and_symlink(fileSrc, fileDest):
     os.rename(fileSrc, fileDest)
