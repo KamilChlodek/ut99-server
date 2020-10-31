@@ -38,7 +38,7 @@ def initial_setup():
     set_config_value(utIniFileServer, 'Engine.GameInfo', 'AdminPassword', 'admin')
     set_config_value(utIniFileServer, 'Engine.GameInfo', 'GamePassword', '')
     ## Add some bots by default
-    set_config_value(utIniFileServer, 'Botpack.DeathMatchPlus', 'MinPlayers', '4')
+    set_config_value(utIniFileServer, 'Botpack.DeathMatchPlus', 'MinPlayers', '10')
     ## Section to enable/disable publishing the server in the server list
     set_config_value(utIniFileServer, 'IpServer.UdpServerUplink', 'DoUpLink', 'False')
     set_config_value(utIniFileServer, 'IpServer.UdpServerUplink', 'UpdateMinutes', '1')
